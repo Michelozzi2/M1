@@ -1,0 +1,73 @@
+.title-container {
+    text-align: center; /* Centre le titre */
+    margin-bottom: 20px; /* Ajoute de l'espace sous le titre */
+}
+
+.form-container {
+    background-color: white; /* Arrière-plan blanc pour le formulaire */
+    padding: 20px; /* Espace interne autour du formulaire */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le formulaire */
+    width: 300px; /* Largeur fixe pour le formulaire */
+    margin: 0 auto; /* Centre le formulaire */
+}
+
+input[type="text"], input[type="password"] {
+    width: 300px;  /* Largeur des inputs */
+    padding: 10px;  /* Espace interne autour du texte */
+    margin: 5px 0 15px;  /* Espace autour des inputs */
+    border: 1px solid #ddd;  /* Bordure légère */
+    border-radius: 4px;  /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding dans la largeur et la hauteur */
+}
+
+
+
+.login-container {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.message {
+    color: red;
+    text-align: center;
+}
