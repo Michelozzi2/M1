@@ -25,7 +25,7 @@ class UserModelTests(TestCase):
             User.objects.create(
                 user_login='anotheruser',
                 user_password='password456',
-                user_compte_id=1,  # Utilise le même compte_id que l'utilisateur existant
+                user_compte_id=2,  # Utilise le même compte_id que l'utilisateur existant
                 user_mail='another@example.com'
             )
 

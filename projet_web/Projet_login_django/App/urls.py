@@ -1,16 +1,21 @@
 from django.urls import path
+from django.contrib.auth import views as auth_views
 
-from . import views  # Importe les vues définies dans le fichier views.py
+
+from .views import inventory_list_view, login_view, home_view, signup_view, inventory_list, add_item, update_item, delete_item, consume_item  # Importe les vues définies dans le fichier views.py
 
 # Définition des URL pour l'application. 
 # Chaque URL est liée à une vue spécifique qui gère la logique pour cette route.
 
 urlpatterns = [
-    # URL pour la page de connexion, qui utilise la vue 'login_view'.
-    # Accessible via '/login/' et nommée 'login' pour faciliter les redirections dans le code.
-    path('login/', views.login_view, name='login'),
-
-    # URL pour la page d'accueil, qui utilise la vue 'home_view'.
-    # Accessible via la racine du site ('/'). Cette route est nommée 'home'.
-    path("", views.home_view, name="home"),
+    path('login/', login_view, name='login'),
+    path("", home_view, name="home"),
+    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    path('signup/', signup_view, name='signup'),  # URL pour la page d'inscription
+    path('list/', inventory_list, name='inventory_list'),
+    path('add/', add_item, name='add_item'),
+    path('update/<int:item_id>/', update_item, name='update_item'),
+    path('delete/<int:item_id>/', delete_item, name='delete_item'),
+    path('consume/<int:item_id>/', consume_item, name='consume_item'),
+    path('inventory/', inventory_list_view, name='inventory_list'),
 ]
